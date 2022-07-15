@@ -16,7 +16,7 @@ const CarouselItem = ({item}, parallaxProps) => {
                     <Text>{item.price}</Text>
                 </View>
 
-            </SafeAreaView>
+            </SafeAreaView>1
         </View>
     )
 }
