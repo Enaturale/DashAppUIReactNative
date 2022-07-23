@@ -1,10 +1,10 @@
-const NewArrivals = [
+ export const newarrivals = [
     {
         id: "1",
         title: "Canon",
         desc: "E0S 1200D Camera",
         price:"$600",
-        image:"",
+        image:"require('../../assets/images/canon.png')",
         color:"#F5D007",
     },
     {
@@ -12,7 +12,7 @@ const NewArrivals = [
         title: "JBL",
         desc: "M-Audio",
         price:"$750",
-        image:"",
+        image:"require('../../assets/images/canon.png')",
         color:"#FF009F"
     },
     {
@@ -20,7 +20,7 @@ const NewArrivals = [
         title: "Apple",
         desc: "i Watch 200",
         price:"$850",
-        image:"",
+        image:"require('../../assets/images/canon.png')",
         color:"#037505"
     },
     {
@@ -28,10 +28,10 @@ const NewArrivals = [
         title: "Canon",
         desc: "E0S 1200D Camera",
         price:"$600",
-        image:"",
+        image:"require('../../assets/images/canon.png')",
         color:"#1A237E"
     },
     
-]
+];
 
-export default NewArrivals;
+export default newarrivals;

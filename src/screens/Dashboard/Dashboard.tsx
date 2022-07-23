@@ -1,18 +1,21 @@
 import React from "react";
-import {View, Text, Image, Pressable} from 'react-native';
+import {View, Text, Image, Pressable, FlatList} from 'react-native';
 import Styles from "./Style";
 import Menu from "react-native-vector-icons/MaterialIcons"
 import Searchbar from "../../components/Searchbar/Searchbar";
 
-import NewArrivals from "../../data/NewArrivals";
-import RecentlyViewed from "../../data/RecentlyViewed";
-import CustomSlider from "../../components/Carousel/CustomSlider";
+import newarrivals from "../../data/NewArrivals";
+import images from "../../data/Images";
+import recentlyviewed from "../../data/RecentlyViewed";
+import CarouselCards from "../../components/ImageCarousel/CarouselCard";
 
 const Dashboard = () => {
+     
+
     return(
         <View>
         {/* header section */}
-            <View style={{flexDirection:'row', marginTop: 70, justifyContent:'space-between'}}>
+            <View style={{flexDirection:'row', marginTop: 40, justifyContent:'space-between'}}>
                 <Image 
                    source={require('../../../assets/images/woman.jpg')}  
                    style={{height: 55, width: 55, resizeMode:'contain', borderRadius: 40, marginLeft: 30,}}
@@ -32,23 +35,31 @@ const Dashboard = () => {
             <Searchbar />
 
             {/* New Arrivals section */}
-            <View style={Styles.newArrival}>
-                <View>
+            <View >
+                <View style={Styles.newArrival}>
                    <Text style={Styles.newText}>New Arrivals</Text>
-                </View> 
+                </View>  
 
-                <CustomSlider data={NewArrivals}/>              
+                <CarouselCards data={newarrivals} />
+
+                <View style={Styles.newArrival}>
+                   <Text style={Styles.newText}>Recently Viewed</Text>
+                </View>
+
+                {/* <CarouselCards data={recentlyviewed}  /> */}
+                
+                                         
             </View>
 
             {/* Recently Viewed */}
-            <View style={Styles.recentlyViewed}>
+            {/* <View style={Styles.recentlyViewed}>
                 <View>
                    <Text style={Styles.newText}>Recently Viewed</Text>
-                </View>      
-                <CustomSlider data={RecentlyViewed}/>          
-            </View>
+                </View>        
+            </View> */}
 
             </View>
+            
             
 
           

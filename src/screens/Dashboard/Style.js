@@ -4,18 +4,20 @@ const Styles = StyleSheet.create({
     newArrival:{
         alignItems:'center',
         justifyContent:'center',
-        marginTop: 30,
+        marginTop: 20,
+       
     },
     recentlyViewed:{
         alignItems:'center',
         justifyContent:'center',
-        marginTop: 30,
+        marginTop: 70,
 
     },
     newText:{
         fontSize: 30,
         fontFamily:'Segoe UI Bold',
-        color:'black'
+        color:'black',
+        marginBottom: 10,
     }
 
 })
