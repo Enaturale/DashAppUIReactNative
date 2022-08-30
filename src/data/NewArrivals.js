@@ -1,10 +1,10 @@
- export const newarrivals = [
+const newarrivals = [
     {
         id: "1",
         title: "Canon",
         desc: "E0S 1200D Camera",
         price:"$600",
-        image:"require('../../assets/images/canon.png')",
+        image:"require('../../assets/images/google.png')",
         color:"#F5D007",
     },
     {
@@ -12,7 +12,7 @@
         title: "JBL",
         desc: "M-Audio",
         price:"$750",
-        image:"require('../../assets/images/canon.png')",
+        image:"require('../../assets/images/google.png')",
         color:"#FF009F"
     },
     {
@@ -20,7 +20,7 @@
         title: "Apple",
         desc: "i Watch 200",
         price:"$850",
-        image:"require('../../assets/images/canon.png')",
+        image:"require('../../assets/images/google.png')",
         color:"#037505"
     },
     {
@@ -28,7 +28,7 @@
         title: "Canon",
         desc: "E0S 1200D Camera",
         price:"$600",
-        image:"require('../../assets/images/canon.png')",
+        image:"require('../../assets/images/google.png')",
         color:"#1A237E"
     },
     

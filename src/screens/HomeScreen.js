@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import Login from './Login/Login';
+
 
 const HomeScreen = ({navigation}) => {
   const gotoLogin = () => {

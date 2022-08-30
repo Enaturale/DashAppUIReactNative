@@ -1,5 +1,5 @@
 import React from "react";
-import {View, Text, Image, Pressable, FlatList} from 'react-native';
+import {View, Text, Image, Pressable, FlatList, ScrollView} from 'react-native';
 import Styles from "./Style";
 import Menu from "react-native-vector-icons/MaterialIcons"
 import Searchbar from "../../components/Searchbar/Searchbar";
@@ -13,9 +13,10 @@ const Dashboard = () => {
      
 
     return(
-        <View>
+        <ScrollView>
+        <View >
         {/* header section */}
-            <View style={{flexDirection:'row', marginTop: 40, justifyContent:'space-between'}}>
+            <View style={{flexDirection:'row', marginTop: 20, justifyContent:'space-between'}}>
                 <Image 
                    source={require('../../../assets/images/woman.jpg')}  
                    style={{height: 55, width: 55, resizeMode:'contain', borderRadius: 40, marginLeft: 30,}}
@@ -31,11 +32,11 @@ const Dashboard = () => {
             </View>
 
             {/* Search bar */}
-            <View style={{marginTop: 30,}}>
+            <View style={{marginTop: 10,}}>
             <Searchbar />
 
             {/* New Arrivals section */}
-            <View >
+            <View  style={{marginBottom: 20,}}>
                 <View style={Styles.newArrival}>
                    <Text style={Styles.newText}>New Arrivals</Text>
                 </View>  
@@ -46,7 +47,11 @@ const Dashboard = () => {
                    <Text style={Styles.newText}>Recently Viewed</Text>
                 </View>
 
-                {/* <CarouselCards data={recentlyviewed}  /> */}
+                <CarouselCards data={recentlyviewed}  />
+
+                <View style={{height: 100}}>
+                    
+                </View>
                 
                                          
             </View>
@@ -58,12 +63,14 @@ const Dashboard = () => {
                 </View>        
             </View> */}
 
-            </View>
+            
             
             
 
           
         </View>
+        </View>
+        </ScrollView>
     )
 }
 

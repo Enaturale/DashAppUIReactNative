@@ -5,7 +5,8 @@ import { ParallaxImage } from 'react-native-snap-carousel'
 export const SLIDER_WIDTH = Dimensions.get('window').width - 40
 export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.5)
 
-const CarouselCardItem = ({ item, index }, parallaxProps) => {
+
+const CarouselCardItem = ({ item, index, }, parallaxProps) => {
   return (
     <View style={styles.container} key={index}>
         <Text style={styles.header}>{item.title}</Text>
