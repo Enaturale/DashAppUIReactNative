@@ -11,6 +11,8 @@ import Message from "./src/screens/Message/Message";
 import LikedItems from "./src/screens/LikedItems/LikedItems";
 import Camera from "./src/screens/Camera/Camera";
 
+import Icon from 'react-native-vector-icons/MaterialIcons'
+
 
 
 function DashboardScreen(){
@@ -20,7 +22,7 @@ function DashboardScreen(){
             <Stack.Screen name="ExplorePage" component={Explore} options={{headerShown: false}} />
             <Stack.Screen name="MessagePage" component={Message} options={{headerShown: false}} />
             <Stack.Screen name="LikedPage" component={LikedItems} options={{headerShown: false}} />
-            <Stack.Screen name="CameraPage" component={Camera} options={{headerShown: false}} />
+            <Stack.Screen name="CameraPag" component={Camera} options={{headerShown: false}} />
         </Stack.Navigator>
     )
 }
@@ -56,7 +58,7 @@ function LikedItemsScreen(){
             <Stack.Screen name="ExplorePage" component={Explore} options={{headerShown: false}} />
             <Stack.Screen name="MessageerPage" component={Message} options={{headerShown: false}} />
             <Stack.Screen name="DasboPage" component={Dashboard} options={{headerShown: false}} />
-            <Stack.Screen name="Cam12Page" component={Camera} options={{headerShown: false}} />
+            <Stack.Screen name="Camscreen" component={Camera} options={{headerShown: false}} />
         </Stack.Navigator>
     )
 }
@@ -64,7 +66,7 @@ function LikedItemsScreen(){
 function CameraScreen(){
     return(
         <Stack.Navigator>
-            <Stack.Screen name="Camera" component={Camera} options={{headerShown: false}} />
+            <Stack.Screen name="CameraPg" component={Camera} options={{headerShown: false}} />
             <Stack.Screen name="Explore" component={Explore} options={{headerShown: false}} />
             <Stack.Screen name="Message" component={Message} options={{headerShown: false}} />
             <Stack.Screen name="Liked" component={LikedItems} options={{headerShown: false}} />
@@ -74,14 +76,83 @@ function CameraScreen(){
 }
 
 
-export default function bottomTab(props){
+export default function BottomTab({tab, isActive}){
     return(
-        <Tab.Navigator>
-            <Tab.Screen name="Home" component={DashboardScreen} options={{headerShown: false}} />
-            <Tab.Screen name="Explore" component={ExploreScreen} options={{headerShown: false}} />
-            <Tab.Screen name="Camera" component={CameraScreen} options={{headerShown: false}} />
-            <Tab.Screen name="Favorite" component={LikedItemsScreen} options={{headerShown: false}} />
-            <Tab.Screen name="Message" component={MessageScreen} options={{headerShown: false}} />
+        <Tab.Navigator 
+                screenOptions={{
+                    tabBarStyle:{
+                        backgroundColor: '#E86B62',
+                        height: 80,
+                        borderTopEndRadius: 40,
+                        borderTopStartRadius: 40,
+                       
+                    },
+                    tabBarLabelStyle:{
+                        fontSize: 15,
+                        fontFamily:'Segoe UI Bold',
+                        color: 'white',
+                        marginBottom: 15,
+                    },
+                   
+                }}
+        >
+
+            <Tab.Screen 
+                name="Home" 
+                component={DashboardScreen} 
+                options={{
+                    headerShown: false,
+                    tabBarIcon: () => ( isActive ?
+                        <Icon name="home" size={23} color="blue" style={{ marginTop: 15,}}/> :
+                        <Icon name="home" size={23} color="white" style={{ marginTop: 15,}}/>
+                    ),
+                    
+                }} 
+            />
+
+            <Tab.Screen 
+                name="Explore" 
+                component={ExploreScreen} 
+                options={{
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <Icon name="explore" size={23} color="white" style={{ marginTop: 15,}}/>
+                    ),
+                   
+                }} 
+            />
+
+            <Tab.Screen 
+                name="Camera" 
+                component={CameraScreen} 
+                options={{
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <Icon name="camera-alt" size={45} color="white"  />
+                    )
+                }} 
+            />
+
+            <Tab.Screen
+                name="Favorite" 
+                component={LikedItemsScreen} 
+                options={{
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <Icon name="favorite" size={23} color="white" style={{ marginTop: 15,}} />
+                    )
+                }} 
+            />
+            <Tab.Screen 
+                name="Message" 
+                component={MessageScreen} 
+                options={{
+                    headerShown: false,
+                    tabBarIcon: () => (
+                        <Icon name="message" size={23} color="white" style={{ marginTop: 15,}} />
+                    )
+                }} 
+            />
         </Tab.Navigator>
     )
 }

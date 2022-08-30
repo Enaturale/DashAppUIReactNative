@@ -4,7 +4,8 @@ const newarrivals = [
         title: "Canon",
         desc: "E0S 1200D Camera",
         price:"$600",
-        image:"require('../../assets/images/google.png')",
+        image:"https://pixabay.com/photos/workspace-coffee-laptop-macbook-1280538/",
+
         color:"#F5D007",
     },
     {
@@ -12,7 +13,8 @@ const newarrivals = [
         title: "JBL",
         desc: "M-Audio",
         price:"$750",
-        image:"require('../../assets/images/google.png')",
+        image:"https://pixabay.com/photos/workspace-coffee-laptop-macbook-1280538/",
+
         color:"#FF009F"
     },
     {
@@ -20,7 +22,8 @@ const newarrivals = [
         title: "Apple",
         desc: "i Watch 200",
         price:"$850",
-        image:"require('../../assets/images/google.png')",
+        image:"https://pixabay.com/photos/workspace-coffee-laptop-macbook-1280538/",
+
         color:"#037505"
     },
     {
@@ -28,7 +31,8 @@ const newarrivals = [
         title: "Canon",
         desc: "E0S 1200D Camera",
         price:"$600",
-        image:"require('../../assets/images/google.png')",
+        image:"https://pixabay.com/photos/workspace-coffee-laptop-macbook-1280538/",
+
         color:"#1A237E"
     },
     

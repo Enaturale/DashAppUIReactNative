@@ -16,7 +16,7 @@ const Dashboard = () => {
         <ScrollView>
         <View >
         {/* header section */}
-            <View style={{flexDirection:'row', marginTop: 20, justifyContent:'space-between'}}>
+            <View style={{flexDirection:'row', marginTop: 40, justifyContent:'space-between'}}>
                 <Image 
                    source={require('../../../assets/images/woman.jpg')}  
                    style={{height: 55, width: 55, resizeMode:'contain', borderRadius: 40, marginLeft: 30,}}
@@ -49,7 +49,7 @@ const Dashboard = () => {
 
                 <CarouselCards data={recentlyviewed}  />
 
-                <View style={{height: 100}}>
+                <View style={{height: 30}}>
                     
                 </View>
                 

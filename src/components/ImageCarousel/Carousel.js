@@ -2,8 +2,8 @@ import React from 'react'
 import { View, Text, StyleSheet, Dimensions, Image } from "react-native"
 import { ParallaxImage } from 'react-native-snap-carousel'
 
-export const SLIDER_WIDTH = Dimensions.get('window').width - 40
-export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.5)
+export const SLIDER_WIDTH = Dimensions.get('window').width - 20
+export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.36)
 
 
 const CarouselCardItem = ({ item, index, }, parallaxProps) => {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 8,
     width: ITEM_WIDTH,
-    paddingBottom: 40,
+    paddingBottom: 10,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
     elevation: 7,
     marginHorizontal: 60,
-    marginLeft: -60,
+    marginLeft: -90,
     
   },
   image: {
@@ -48,7 +48,6 @@ const styles = StyleSheet.create({
   imageContainer:{
     flex: 3,
    borderRadius: 20,
-    backgroundColor: '#e3e3e3',
     marginBottom: Platform.select({ios:0, android:1}),
     marginTop: 15,
     //marginLeft: 85,

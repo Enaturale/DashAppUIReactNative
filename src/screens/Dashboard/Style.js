@@ -14,7 +14,7 @@ const Styles = StyleSheet.create({
 
     },
     newText:{
-        fontSize: 30,
+        fontSize: 22,
         fontFamily:'Segoe UI Bold',
         color:'black',
         marginBottom: 10,
