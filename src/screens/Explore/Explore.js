@@ -1,10 +1,11 @@
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, View, StyleSheet, FlatList } from 'react-native'
 import React from 'react'
 
 import HeaderPage from '../../components/Header/Header'
 import Searchbar from '../../components/Searchbar/Searchbar'
 
 import ExploreCarousel from './ExploreCarousel'
+import List from './List'
 
 const Explore = () => {
 
@@ -16,8 +17,17 @@ const Explore = () => {
 
       <Searchbar />
 
-      <View> 
-        <ExploreCarousel />        
+      <View>
+        <ExploreCarousel />
+      </View>
+
+      <View>
+
+      </View>
+
+
+      <View style={{marginBottom: 400,}}>
+        <List />
       </View>
 
     </View>

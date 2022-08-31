@@ -8,7 +8,7 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.36)
 
 const CarouselCardItem = ({ item, index, }, parallaxProps) => {
   return (
-    <View style={styles.container} key={index}>
+    <View style={[styles.container, {backgroundColor: item.color}]} key={index}>
         <Text style={styles.header}>{item.title}</Text>
       <Text style={styles.body}>{item.desc}</Text>
       <Image

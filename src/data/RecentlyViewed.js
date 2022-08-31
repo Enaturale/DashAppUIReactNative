@@ -5,7 +5,7 @@ const recentlyviewed = [
         desc: "iPhone 11 Pro Max",
         price:"$550",
         image:"https://pixabay.com/photos/workspace-coffee-laptop-macbook-1280538/",
-        color:"#1A237E",
+        color:"#9900EF",
     },
     {
         id: "2",

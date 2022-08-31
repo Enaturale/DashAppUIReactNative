@@ -7,15 +7,15 @@ const ExploreCarousel = () => {
         const carouselItems =[
         {
             text: "Phones",
-            colori: "#E31A95",
+            colori: "#FF097D",
         },
         {
             text:"Watches",
-            colori:"#0693E3"
+            colori:"#00C9E3"
         },
         {
-            text: "Laptops",
-            colori:"#27C82D"
+            text: "Laptops",            
+            colori:"#9900EF"
         },
         {
             text:"Shoes",
@@ -41,7 +41,7 @@ const ExploreCarousel = () => {
                     ref={isCarousel}
                     data={carouselItems}
                     renderItem={_renderItem}
-                    itemWidth={120}
+                    itemWidth={160}
                     sliderWidth={550}
                  />
 
@@ -58,9 +58,9 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         backgroundColor:"green",       
         borderRadius: 10,
-        height: 40,
-        width: 110,
-        marginLeft:-140,
+        height: 45,
+        width: 150,
+        marginLeft:-175,
         alignContent:'center',
         justifyContent:'center',
         alignItems:'center'
