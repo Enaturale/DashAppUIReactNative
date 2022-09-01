@@ -2,6 +2,7 @@ import React from "react"
 import { View, Text, SafeAreaView, FlatList, ScrollView, Image } from 'react-native';
 
 import styles from "./Styles";
+import images from './images'
 
 const listdata = [
     {
@@ -11,7 +12,7 @@ const listdata = [
         location: 'England',
         productname: 'Balenciaga',
         price: '900',
-        productimage: 'https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907__340.jpgr',
+        productimage: 'https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907__340.jpg',
         color: '#00C9E3',
     },
     {
@@ -47,7 +48,7 @@ const listdata = [
 
 ];
 
-const ListItem = ({ index, item }) => {
+const ListItem = ({ index, item}) => {
     return (
         <View style={[styles.container, { backgroundColor: item.color }]}>
             <View style={styles.topSection}>
@@ -60,7 +61,7 @@ const ListItem = ({ index, item }) => {
 
 
             <View style={styles.imageSection}>
-                <Image source={{ uri: item.productimage }} style={styles.image} />
+                <Image source={{ uri: images }} style={styles.image} />
             </View>
 
             <View style={styles.bottomSection}>
@@ -79,7 +80,8 @@ const List = () => {
 
             <FlatList
                 data={listdata}
-                renderItem={({ item }) => <ListItem item={item} />}
+                showsVerticalScrollIndicator={false} 
+                renderItem={({ item }) => <ListItem item={item}  />}
             />
 
         </SafeAreaView>
