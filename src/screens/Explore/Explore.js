@@ -26,7 +26,7 @@ const Explore = () => {
       </View>
 
 
-      <View style={{marginBottom: 400,}}>
+      <View style={{ marginBottom: 400, }}>
         <List />
       </View>
 
