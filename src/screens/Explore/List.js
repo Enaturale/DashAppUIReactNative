@@ -1,8 +1,13 @@
 import React from "react"
-import { View, Text, SafeAreaView, FlatList, ScrollView, Image } from 'react-native';
+import { View, Text, SafeAreaView, FlatList, ScrollView, Image, VirtualizedList } from 'react-native';
+
+import Carousel from 'react-native-snap-carousel';
+
 
 import styles from "./Styles";
 import images from './images'
+
+
 
 const listdata = [
     {
@@ -61,7 +66,7 @@ const ListItem = ({ index, item}) => {
 
 
             <View style={styles.imageSection}>
-                <Image source={{ uri: images }} style={styles.image} />
+                <Image source={{ uri: item.productimage }} style={styles.image} />
             </View>
 
             <View style={styles.bottomSection}>
@@ -75,6 +80,8 @@ const ListItem = ({ index, item}) => {
 
 
 const List = () => {
+    const isCarousel = React.useRef(null);
+    const [slideIndex, setSlideIndex] = React.useState(0);
     return (
         <SafeAreaView style={styles.mainContainer}>
 
@@ -83,6 +90,19 @@ const List = () => {
                 showsVerticalScrollIndicator={false} 
                 renderItem={({ item }) => <ListItem item={item}  />}
             />
+            {/* <Carousel 
+            layout={"default"}
+            ref={isCarousel}
+            data={listdata}
+            renderItem={ListItem}
+            // itemWidth={160}
+            // sliderWidth={550}
+            vertical={true}
+            sliderHeight={500}
+            itemHeight={370}
+            onSnapToItem = {(index) => setSlideIndex(index)}
+           
+            /> */}
 
         </SafeAreaView>
     )

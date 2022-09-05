@@ -9,6 +9,8 @@ import images from "../../data/Images";
 import recentlyviewed from "../../data/RecentlyViewed";
 import CarouselCards from "../../components/ImageCarousel/CarouselCard";
 
+import DashboardCarousel from "./DashboardCarousel";
+
 const Dashboard = () => {
      
 

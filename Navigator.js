@@ -76,38 +76,44 @@ function CameraScreen(){
 }
 
 
-export default function BottomTab({tab, isActive}){
+export default function BottomTab({tab, focused}){
     return(
-        <Tab.Navigator 
-                screenOptions={{
+        <Tab.Navigator         
+                screenOptions={{   
+                    tabBarActiveTintColor:'#06275A'     ,
+                    tabBarInactiveTintColor:'white',      
                     tabBarStyle:{
                         backgroundColor: '#E86B62',
                         height: 80,
                         borderTopEndRadius: 40,
-                        borderTopStartRadius: 40,
-                       
+                        borderTopStartRadius: 40,        
                     },
                     tabBarLabelStyle:{
                         fontSize: 15,
                         fontFamily:'Segoe UI Bold',
-                        color: 'white',
+                        //color: focused ? '#06275A' : 'white',
                         marginBottom: 15,
-                    },
-                   
+                    },   
+                    // tabBarOptions:{
+                    //     activeTintColor:'#06275A',
+                    //     inactiveTintColor:'white'
+                    // }
+                                  
                 }}
         >
 
             <Tab.Screen 
                 name="Home" 
                 component={DashboardScreen} 
-                options={{
+                options={{                    
                     headerShown: false,
-                    tabBarIcon: () => ( isActive ?
-                        <Icon name="home" size={23} color="blue" style={{ marginTop: 15,}}/> :
-                        <Icon name="home" size={23} color="white" style={{ marginTop: 15,}}/>
-                    ),
+                    tabBarIcon: ({focused}) => ( 
+                        <Icon name="home" size={23} color={focused ? '#06275A' : 'white'} style={{ marginTop: 15,}}/>
+                    ),  
+                  
                     
                 }} 
+            
             />
 
             <Tab.Screen 
@@ -115,8 +121,8 @@ export default function BottomTab({tab, isActive}){
                 component={ExploreScreen} 
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <Icon name="explore" size={23} color="white" style={{ marginTop: 15,}}/>
+                    tabBarIcon: ({focused}) => (
+                        <Icon name="explore" size={23} color={focused ? '#06275A' : 'white'} style={{ marginTop: 15,}}/>
                     ),
                    
                 }} 
@@ -127,8 +133,8 @@ export default function BottomTab({tab, isActive}){
                 component={CameraScreen} 
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <Icon name="camera-alt" size={45} color="white"  />
+                    tabBarIcon: ({focused}) => (
+                        <Icon name="camera-alt" size={45} color={focused ? '#06275A' : 'white'}  />
                     )
                 }} 
             />
@@ -138,8 +144,8 @@ export default function BottomTab({tab, isActive}){
                 component={LikedItemsScreen} 
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <Icon name="favorite" size={23} color="white" style={{ marginTop: 15,}} />
+                    tabBarIcon: ({focused}) => (
+                        <Icon name="favorite" size={23} color={focused ? '#06275A' : 'white'} style={{ marginTop: 15,}} />
                     )
                 }} 
             />
@@ -148,12 +154,12 @@ export default function BottomTab({tab, isActive}){
                 component={MessageScreen} 
                 options={{
                     headerShown: false,
-                    tabBarIcon: () => (
-                        <Icon name="message" size={23} color="white" style={{ marginTop: 15,}} />
-                    )
+                    tabBarIcon: ({focused}) => (
+                        <Icon name="message" size={23} color={focused ? '#06275A' : 'white'} style={{ marginTop: 15,}} />
+                    ),
+                    
                 }} 
             />
         </Tab.Navigator>
     )
 }
-
