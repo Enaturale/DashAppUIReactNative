@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native"
+import { View, Text, StyleSheet, Dimensions, Image, SafeAreaView } from "react-native"
 import { ParallaxImage } from 'react-native-snap-carousel'
 
 export const SLIDER_WIDTH = Dimensions.get('window').width - 20
@@ -8,7 +8,7 @@ export const ITEM_WIDTH = Math.round(SLIDER_WIDTH * 0.36)
 
 const CarouselCardItem = ({ item, index, }, parallaxProps) => {
   return (
-    <View style={[styles.container, {backgroundColor: item.color}]} key={index}>
+    <SafeAreaView style={[styles.container, {backgroundColor: item.color}]} key={index}>
         <Text style={styles.header}>{item.title}</Text>
       <Text style={styles.body}>{item.desc}</Text>
       <Image
@@ -18,7 +18,7 @@ const CarouselCardItem = ({ item, index, }, parallaxProps) => {
       />
       <Text style={styles.body}>{item.price}</Text>
       
-    </View>
+    </SafeAreaView>
   )
 }
 
@@ -43,7 +43,9 @@ const styles = StyleSheet.create({
   },
   image: {
     width: ITEM_WIDTH,
-    height: 100,
+    height: 120,
+    marginTop: 5,
+    marginBottom: 2,
   },
   imageContainer:{
     flex: 3,
@@ -55,9 +57,8 @@ const styles = StyleSheet.create({
   header: {
     color: "#222",
     fontSize: 20,
-    fontWeight: "bold",
     paddingLeft: 20,
-    paddingTop: 20,
+    paddingTop: 10,
     fontFamily:'Segoe UI Bold',
   },
   body: {
