@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     },
     image:{
         height: 170,
-        width: 180,        
+        width: 300,        
     },
     imageSection:{
         justifyContent:'center',
