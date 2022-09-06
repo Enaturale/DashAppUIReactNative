@@ -8,12 +8,19 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 
 const HeaderPage = ({ navigation }) => {
     const gobacktoMain = () => {
-        navigation.navigate("Dashboard")
+        return (
+            navigation.navigate("Dashboard")
+        )
     }
     return (
-        <View style={{ marginVertical: 20, marginHorizontal: 20, justifyContent: 'space-between',  flexDirection: "row",     
-        width: 380,
-        height: 100,}}>
+        <View style={{
+            marginVertical: 20,
+            marginHorizontal: 20,
+            justifyContent: 'space-between',
+            flexDirection: "row",
+            width: 380,
+            height: 100,
+        }}>
             <View>
                 <Pressable onPress={gobacktoMain}>
                     <Icon name="arrow-left-box" size={35} color="#E86B62" />

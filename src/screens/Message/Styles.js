@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     productName:{
         fontSize: 18,
         fontFamily:"Segoe UI Bold",
-        color:'black',
+        color:'#E86B62',
     },
     person:{
         fontSize: 16,
