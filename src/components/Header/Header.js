@@ -4,9 +4,12 @@ import { View, Text, Pressable, StyleSheet } from 'react-native';
 import Menu from "react-native-vector-icons/MaterialIcons";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 
+import {useNavigation} from '@react-navigation/native'
 
 
-const HeaderPage = ({ navigation }) => {
+
+const HeaderPage = () => {
+    const navigation  = useNavigation();
     const gobacktoMain = () => {
         return (
             navigation.navigate("Dashboard")
@@ -22,7 +25,7 @@ const HeaderPage = ({ navigation }) => {
             height: 100,
         }}>
             <View>
-                <Pressable onPress={gobacktoMain}>
+                <Pressable onPress={() => navigation.navigate('DashboardPage')}>
                     <Icon name="arrow-left-box" size={35} color="#E86B62" />
                 </Pressable>
             </View>
