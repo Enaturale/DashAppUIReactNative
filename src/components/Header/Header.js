@@ -7,7 +7,6 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 import {useNavigation} from '@react-navigation/native'
 
 
-
 const HeaderPage = () => {
     const navigation  = useNavigation();
     const gobacktoMain = () => {
@@ -31,7 +30,7 @@ const HeaderPage = () => {
             </View>
 
             <View>
-                <Pressable>
+                <Pressable >
                     <Menu name="menu" color={"#E86B62"} size={35} style={{ marginRight: 30, }} />
                 </Pressable>
             </View>

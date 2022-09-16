@@ -3,6 +3,7 @@ import React from 'react'
 
 import styles from './Styles';
 import HeaderPage from '../../components/Header/Header';
+import Arrows from '../../components/Arrows/Arrows';
 import Searchbar from '../../components/Searchbar/Searchbar';
 import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 
@@ -66,26 +67,7 @@ const LikedItems = ({ navigation }) => {
         />
       </SafeAreaView>
 
-      <View style={{ flexDirection: 'row', alignContent: 'center', alignItems: 'center', justifyContent: "center", marginVertical: 20, }}>
-        <Pressable>
-          <Icon name="arrow-left-bold-box-outline" size={50} color="black" />
-        </Pressable>
-
-
-        <Pressable style={styles.pressable}>
-          <Text style={{ fontSize: 20, fontWeight: 'bold' }}> 1</Text>
-        </Pressable>
-
-        <Pressable style={styles.pressable}>
-          <Text style={{ fontSize: 20, fontWeight: 'bold' }}> 2</Text>
-        </Pressable>
-
-        <Pressable>
-          <Icon name="arrow-right-bold-box-outline" size={50} color="black" />
-
-        </Pressable>
-
-      </View>
+      <Arrows />
 
 
 
